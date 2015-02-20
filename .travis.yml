@@ -7,7 +7,8 @@ before_install:
     - sudo apt-get install -qq tup
 
 install:
-    - cd simulator && tup variant configs/*
+    - cd simulator
+    - tup variant configs/*
 
 script:
-    - cd simulator && tup
+    - tup
