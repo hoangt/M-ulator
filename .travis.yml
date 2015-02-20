@@ -2,11 +2,15 @@ language: c
 
 before_install:
     - sudo apt-get install -qq python-dev gcc-arm-linux-gnueabi
+    - sudo apt-get install -qq libfuse-dev pkg-config fuse user-mode-linux
+    - sudo mknod /dev/fuse c 10 229
+    - sudo chmod 666 /dev/fuse
     - sudo apt-add-repository 'deb http://ppa.launchpad.net/anatol/tup/ubuntu precise main'
     - sudo apt-get update
     - sudo apt-get install -qq tup
 
 install:
+    - ./umltest.sh
     - cd simulator
     - tup variant configs/*
 
