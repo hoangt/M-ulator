@@ -14,7 +14,9 @@ cat > umltest.inner.sh <<EOF
    set -x
    insmod /usr/lib/uml/modules/\`uname -r\`/kernel/fs/fuse/fuse.ko
    cd "$CURDIR"
-   ./tests.sh
+   cd simulator
+   tup variant configs/*
+   tup
    echo Success
 )
 echo "\$?" > "$CURDIR"/umltest.status
