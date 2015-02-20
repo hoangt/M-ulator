@@ -1,7 +1,7 @@
 language: c
 
 before_install:
-    - sudo apt-get install -qq python-dev gcc-arm-none-eabi
+    - sudo apt-get install -qq python-dev gcc-arm-linux-gnueabi
     - sudo apt-add-repository 'deb http://ppa.launchpad.net/anatol/tup/ubuntu precise main'
     - sudo apt-get update
     - sudo apt-get install -qq tup
