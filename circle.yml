@@ -1,0 +1,6 @@
+general:
+  build_dir: simulator
+
+test:
+  override:
+    ./run_tests.sh
