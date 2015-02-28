@@ -3,5 +3,4 @@ general:
 
 test:
   override:
-    - ./run_tests.sh
-      pwd: simulator
+    - cd simulator && ./run_tests.sh
